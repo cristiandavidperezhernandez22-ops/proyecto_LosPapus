@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod
 from utils import Charge_capacity
+from utils import Fuel_type
 class Vehicle:
     def __init__(self,
                  tire_number:int,
                  charge_capacity:Charge_capacity,
-                 fuel:str,
+                 fuel:Fuel_type,
                  passengers:int,
                  brand:str,
                  price:float):
