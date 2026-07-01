@@ -1,7 +1,7 @@
 from .Vehicle import Vehicle
-from utils.Charge_capacity import Charge_capacity
-from utils.Car_type import Car_type
-from utils.Fuel_type import Fuel_type
+from ..utils.Charge_capacity import Charge_capacity
+from ..utils.Car_type import Car_type
+from ..utils.Fuel_type import Fuel_type
 
 class Car(Vehicle):
     def __init__(self,
@@ -21,4 +21,4 @@ class Car(Vehicle):
         self.trunk_capacity = trunk_capacity
         self.has_air_conditioning = has_air_conditioning
         self.car_type = car_type
-
+        

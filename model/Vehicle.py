@@ -1,7 +1,9 @@
-from abc import ABC, abstractmethod
-from utils import Charge_capacity
-from utils import Fuel_type
-class Vehicle:
+from abc import ABC
+from ..utils import Fuel_type, Charge_capacity
+
+class Vehicle(ABC):
+    _registry = None
+
     def __init__(self,
                  tire_number:int,
                  charge_capacity:Charge_capacity,
@@ -15,3 +17,9 @@ class Vehicle:
         self.passengers = passengers
         self.brand = brand
         self.price = price
+
+        if Vehicle._registry is not None:
+            Vehicle._registry.add(self)
+
+    def __repr__(self):
+        return f"{type(self).__name__}(brand={self.brand}, price={self.price})"
