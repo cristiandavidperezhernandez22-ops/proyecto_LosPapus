@@ -1,6 +1,5 @@
 from .Vehicle import Vehicle
-from ..utils.Charge_capacity import Charge_capacity
-from ..utils.Fuel_type import Fuel_type
+from ..utils import Charge_capacity, Fuel_type
 
 class Tractor(Vehicle):
     __TIRE_NUMBER = 4
@@ -16,4 +15,3 @@ class Tractor(Vehicle):
         super().__init__(Tractor.__TIRE_NUMBER, charge_capacity, fuel, Tractor.__PASSAGERS, brand, price)
         self.doors = Tractor.__DOORS
         self.has_air_conditioning = has_air_conditioning
-        self.passengers

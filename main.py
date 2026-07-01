@@ -5,4 +5,4 @@ concesionaria = Concessionarie()
 Car(brand="Toyota")
 Tractor(brand="John Deere")
 
-print(concesionaria.find(Car))
+print(concesionaria.find(Car, Tractor))

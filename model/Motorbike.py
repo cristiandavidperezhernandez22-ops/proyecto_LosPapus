@@ -1,6 +1,5 @@
 from .Vehicle import Vehicle
-from ..utils.Charge_capacity import Charge_capacity
-from ..utils.Fuel_type import Fuel_type
+from ..utils import Charge_capacity, Fuel_type
 
 class Motorbike(Vehicle):
     def __init__(self,
