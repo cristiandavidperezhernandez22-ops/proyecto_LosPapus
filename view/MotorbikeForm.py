@@ -6,8 +6,8 @@ from ..utils.Fuel_type import Fuel_type
 class MotorbikeForm(VehicleForm):
     def build_fields(self):
         self.brand_var = self._entry(0, "Marca")
-        self.price_var = self._entry(1, "Precio")
-        self.passengers_var = self._entry(2, "Pasajeros", default=2)
+        self.price_var = self._entry_validado(1, "Precio")
+        self.passengers_var = self._entry_validado(2, "Pasajeros", default=2)
         self.fuel_var = self._enum_combobox(3, "Combustible", Fuel_type, Fuel_type.GASOLINE)
         self.charge_var = self._enum_combobox(4, "Capacidad de carga", Charge_capacity, Charge_capacity.LIGHT)
 

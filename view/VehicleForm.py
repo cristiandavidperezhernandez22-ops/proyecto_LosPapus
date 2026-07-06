@@ -1,14 +1,17 @@
 from abc import ABC, abstractmethod
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
+
 
 class VehicleForm(ttk.Frame, ABC):
+
     """Clase base para los formularios de creación de vehículos.
     Cada subclase define sus propios campos y sabe cómo construir
     su instancia de Vehicle correspondiente."""
 
     def __init__(self, parent):
         super().__init__(parent)
+        self.validacion =(self.register(self.validar_entrada), '%P')
         self.build_fields()
 
     @abstractmethod
@@ -30,10 +33,28 @@ class VehicleForm(ttk.Frame, ABC):
         combo.grid(row=row, column=1, sticky="ew", padx=4, pady=2)
         return var
 
+    @staticmethod
+    def validar_entrada(nuevo_texto):
+        if nuevo_texto == "":
+             return True
+        if nuevo_texto in ("."):
+             return True
+        try:
+            float(nuevo_texto)
+            return True
+        except ValueError:
+            messagebox.showerror("Error de entrada", "Solo se permiten números positivo(incluyendo decimales) en este campo.")
+            return False
+
     def _entry(self, row, label_text, default=""):
         ttk.Label(self, text=label_text).grid(row=row, column=0, sticky="w", padx=4, pady=2)
         var = tk.StringVar(value=str(default))
         ttk.Entry(self, textvariable=var).grid(row=row, column=1, sticky="ew", padx=4, pady=2)
+        return var
+    def _entry_validado(self, row, label_text, default=""):
+        ttk.Label(self, text=label_text).grid(row=row, column=0, sticky="w", padx=4, pady=2)
+        var = tk.StringVar(value=str(default))
+        ttk.Entry(self, textvariable=var, validate="key", validatecommand=self.validacion).grid(row=row, column=1, sticky="ew", padx=4, pady=2)
         return var
 
     def _checkbox(self, row, label_text, default=False):

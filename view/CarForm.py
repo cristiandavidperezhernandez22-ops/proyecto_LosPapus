@@ -7,9 +7,9 @@ from ..utils.Car_type import Car_type
 class CarForm(VehicleForm):
     def build_fields(self):
         self.brand_var = self._entry(0, "Marca")
-        self.price_var = self._entry(1, "Precio")
-        self.doors_var = self._entry(2, "Puertas", default=4)
-        self.trunk_var = self._entry(3, "Capacidad baúl (m³)", default=0.0)
+        self.price_var = self._entry_validado(1, "Precio")
+        self.doors_var = self._entry_validado(2, "Puertas", default=4)
+        self.trunk_var = self._entry_validado(3, "Capacidad baúl (m³)", default=0.0)
         self.ac_var = self._checkbox(4, "Aire acondicionado")
         self.fuel_var = self._enum_combobox(5, "Combustible", Fuel_type, Fuel_type.GASOLINE)
         self.charge_var = self._enum_combobox(6, "Capacidad de carga", Charge_capacity, Charge_capacity.MEDIUM)
