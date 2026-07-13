@@ -1,4 +1,4 @@
-from ..model import Vehicle
+from model.Vehicle import Vehicle
 
 class Concessionarie:
     def __init__(self, *vehicles: Vehicle):

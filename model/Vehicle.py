@@ -1,5 +1,5 @@
 from abc import ABC
-from ..utils import Fuel_type, Charge_capacity
+from utils import Fuel_type, Charge_capacity
 
 class Vehicle(ABC):
     _registry = None

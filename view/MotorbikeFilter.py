@@ -1,5 +1,5 @@
 from .VehicleFilter import VehicleFilter
-from ..utils.Fuel_type import Fuel_type
+from utils.Fuel_type import Fuel_type
 
 class MotorbikeFilter(VehicleFilter):
     def build_fields(self):

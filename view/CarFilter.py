@@ -1,6 +1,6 @@
 from .VehicleFilter import VehicleFilter
-from ..utils.Fuel_type import Fuel_type
-from ..utils.Car_type import Car_type
+from utils.Fuel_type import Fuel_type
+from utils.Car_type import Car_type
 
 class CarFilter(VehicleFilter):
     def build_fields(self):

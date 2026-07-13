@@ -1,5 +1,5 @@
 from .Vehicle import Vehicle
-from ..utils import Charge_capacity, Fuel_type, Car_type
+from utils import Charge_capacity, Fuel_type, Car_type
 
 class Car(Vehicle):
     def __init__(self,

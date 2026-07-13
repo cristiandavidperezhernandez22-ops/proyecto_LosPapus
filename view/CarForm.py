@@ -1,8 +1,8 @@
 from .VehicleForm import VehicleForm
-from ..model.Car import Car
-from ..utils.Charge_capacity import Charge_capacity
-from ..utils.Fuel_type import Fuel_type
-from ..utils.Car_type import Car_type
+from model.Car import Car
+from utils.Charge_capacity import Charge_capacity
+from utils.Fuel_type import Fuel_type
+from utils.Car_type import Car_type
 
 class CarForm(VehicleForm):
     def build_fields(self):

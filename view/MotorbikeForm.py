@@ -1,7 +1,7 @@
 from .VehicleForm import VehicleForm
-from ..model.Motorbike import Motorbike
-from ..utils.Charge_capacity import Charge_capacity
-from ..utils.Fuel_type import Fuel_type
+from model.Motorbike import Motorbike
+from utils.Charge_capacity import Charge_capacity
+from utils.Fuel_type import Fuel_type
 
 class MotorbikeForm(VehicleForm):
     def build_fields(self):

@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-from ..logic.Concessionarie import Concessionarie
+from logic.Concessionarie import Concessionarie
 from .AddVehicleTab import AddVehicleTab
 from .VehicleListTab import VehicleListTab
 

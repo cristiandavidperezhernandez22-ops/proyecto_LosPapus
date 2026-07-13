@@ -8,13 +8,14 @@ Tractor(brand="John Deere")
 
 print(concesionaria.find(Car, Tractor))
 """
-from .view import MainWindow
+# from view.MainWindow import MainWindow
 
-if __name__ == "__main__":
-    app = MainWindow()
-    app.mainloop()
+# if __name__ == "__main__":
+#     app = MainWindow()
+#     app.mainloop()
 
 """
+
 import tkinter as tk
 from tkinter import messagebox
 
@@ -49,3 +50,6 @@ botom.pack()
 a.pack()
 ventana.mainloop()
 """
+import csv
+
+with open("datos.csv",mode="w+", ) as a
