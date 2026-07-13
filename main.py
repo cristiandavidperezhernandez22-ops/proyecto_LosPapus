@@ -8,11 +8,11 @@ Tractor(brand="John Deere")
 
 print(concesionaria.find(Car, Tractor))
 """
-# from view.MainWindow import MainWindow
+from view.MainWindow import MainWindow
 
-# if __name__ == "__main__":
-#     app = MainWindow()
-#     app.mainloop()
+if __name__ == "__main__":
+    app = MainWindow()
+    app.mainloop()
 
 """
 
@@ -50,6 +50,3 @@ botom.pack()
 a.pack()
 ventana.mainloop()
 """
-import csv
-
-with open("datos.csv",mode="w+", ) as a
