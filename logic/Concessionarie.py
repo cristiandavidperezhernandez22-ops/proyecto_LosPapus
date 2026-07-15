@@ -11,7 +11,7 @@ class Concessionarie:
     def remove(self, vehicle: Vehicle):
         self.vehicles.remove(vehicle)
 
-    def find(self, *vehicle_classes):
+    def find(self, *vehicle_classes:Vehicle):
         return [v for v in self.vehicles if isinstance(v, vehicle_classes)]
 
     def __len__(self):
