@@ -1,4 +1,5 @@
 from model.Vehicle import Vehicle
+from data.Repositorie import Repositorie
 
 class Concessionarie:
     def __init__(self, *vehicles: Vehicle):
@@ -7,7 +8,7 @@ class Concessionarie:
 
     def add(self, vehicle: Vehicle):
         self.vehicles.append(vehicle)
-
+        
     def remove(self, vehicle: Vehicle):
         self.vehicles.remove(vehicle)
 

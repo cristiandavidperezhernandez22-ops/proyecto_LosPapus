@@ -8,12 +8,11 @@ Tractor(brand="John Deere")
 
 print(concesionaria.find(Car, Tractor))
 """
-from view.MainWindow import MainWindow
-
+"""from view.MainWindow import MainWindow
 if __name__ == "__main__":
     app = MainWindow()
     app.mainloop()
-
+    """
 """
 
 import tkinter as tk
@@ -50,3 +49,9 @@ botom.pack()
 a.pack()
 ventana.mainloop()
 """
+def suma(a,b):
+    def decir():
+        print("el numro es:\n")
+    print(a+b)
+
+suma(1,3)
